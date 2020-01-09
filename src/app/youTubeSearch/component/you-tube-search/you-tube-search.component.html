@@ -1,0 +1,39 @@
+  <!-- Page Content -->
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <h1 class="my-4">YouTube Search </h1>
+
+          <div class="row">
+            <div class="input-group input-group-lg col-md-12">
+              <app-search-box (loading)="loading = $event" (results)="updateResults($event)"></app-search-box>
+            </div>
+          </div>
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+        <div class="row">
+          <app-search-result class="col-lg-4 col-md-6 mb-4" *ngFor="let result of results" [result]="result">
+          </app-search-result>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.col-lg-9 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
